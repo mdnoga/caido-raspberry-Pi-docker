@@ -44,9 +44,10 @@ Having problems, check the docker logs
 sudo docker logs --tail 50 --follow --timestamps {containerID}
 ```
 
-Now that we have Caido running smoohtly in the docker container, we need to proxy traffic to it from what ever other machine your testing on. 
+Now that we have Caido running smoothly in the docker container, we need to proxy traffic to it from what ever other machine your testing on. 
 
 Proxy local to RPi
 ```bash
-ssh -L 8080:127.0.0.1:8080 whiskey@192.168.1.126
+# (USE IP of RPi on your network)
+ssh -L 8080:127.0.0.1:8080 whiskey@192.168.1.125 
 ```
