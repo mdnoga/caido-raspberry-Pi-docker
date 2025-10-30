@@ -27,7 +27,7 @@ Projects created in the Docker container are not saved between restarts.
 Mount a volume (external drive plugged onto the Pi) to keep your data on and to avoid losing data between Caido updates and/or restarts.
 
 ```bash
-sudo docker run -d \
+sudo docker run --rm -d \
     --restart always \
     --user root \
     -e NB_UID=1000 \
